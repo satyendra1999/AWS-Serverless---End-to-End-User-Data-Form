@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data- AWS Serverless-Project</title>
+    <style>
+        body {
+            background-image: url(background.jpg);
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+          
+        }
+
+        h1 {
+            
+            color: #e7f60f; /* Yellow heading text */
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1:hover{
+            color:#07fa0b;
+            transition: 0.3ms;
+            
+        }
+        label{
+            color: blue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+            
+        }
+
+        .container {
+            
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(9, 249, 73, 0.1);
+            max-width: 500px;
+            border: 2px rgb(2, 23, 253);
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #03f4fc;
+            border-radius: 10px;
+        }
+        
+
+        input[type="submit"] {
+            background-color: #E5280E; /* red submit button */
+            color: #fff; /* White text */
+            cursor: pointer; /* Add pointer cursor */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light gray header background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align=center>Demo Pvt Ltd Employee Data</h1>
+        <label for="employeeid"><b>Employee ID:</b></label><br>
+        <input type="text" name="employeeid" id="employeeid"><br>
+        
+        <label for="name"><b>Name:</b></label><br>
+        <input type="text" name="name" id="name"><br>
+        
+        <label for="department"><b>Department:</b></label><br>
+        <input type="text" name="department" id="department"><br>
+        
+        <label for="salary"><b>Salary:</b></label><br>
+        <input type="text" name="salary" id="salary"><br>
+        
+        <br>
+        <input type="submit" id="saveemployee" value="Save Employee Data">
+        <p id="EmployeeSaved"></p>
+        
+        <br>
+        <input type="submit" id="getemployees" value="View all Employees">
+        <br><br>
+        <div id="showEmployees">
+            <table id="EmployeeTable">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Employee data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
